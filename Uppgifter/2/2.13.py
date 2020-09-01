@@ -21,16 +21,10 @@ def is_sorted(num_list):
     return True
 
 
-def swap(list, i1, i2):
-    a = list[i2]
-    list[i2] = list[i1]
-    list[i1] = a
-
-
 # om man har tur är denna sorten snabb
 def bogosort(num_list):
     while not is_sorted(num_list):
-        swap(num_list, random.randrange(len(num_list)), random.randrange(len(num_list)))
+        random.shuffle(num_list)
 
 
 def square_list(num_list):
