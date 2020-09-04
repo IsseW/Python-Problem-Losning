@@ -29,5 +29,36 @@ Körexempel:
 """
 
 
+def matrix_dimensions(matrix):
+    width = len(matrix)
+    if width == 0:
+        return 0, 0
+    height = len(matrix[0])
+    for i in range(1, width):
+        if len(matrix[i]) != height:
+            return -1, -1
+    return width, height
+
+
 def transpose(matrix):
-    new_matrix = []
+
+    width, height = matrix_dimensions(matrix)
+
+    new_matrix = [[] for i in range(height)]
+
+    _x = 0
+
+    for x in range(width):
+        for y in range(height):
+            new_matrix[_x].append(matrix[x][y])
+            _x += 1
+        _x = 0
+    return new_matrix
+
+
+A = [[1, 2, 3], [4, 5, 6]]
+print(transpose(A))
+
+print(transpose([[1, 2]]))
+
+print(transpose([[3]]))
