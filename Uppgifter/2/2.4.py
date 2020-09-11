@@ -14,7 +14,6 @@ Körexempel:
 -1
 """
 
-
 def search(text: str, query: str):
     # loopa genom alla karaktärer i text
     for i in range(len(text)):
