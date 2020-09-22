@@ -1,0 +1,6 @@
+Den till vänster ser bättre ut men svårare att förstå
+eftersom namnen den har valt till variabler och funktioner.
+Man behövde till exempel kolla på den till höger för att första 
+vad funktionen m() gjorde. Den vänstra har också flera användingar
+av continue vilket kan göra det svårare att följa koden. 
+
